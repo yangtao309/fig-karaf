@@ -10,7 +10,9 @@ git clone https://github.com/yangtao309/fig-karaf.git
 
 ```
 sudo chmod +x install-fig.sh
+
 ./install-fig.sh
+
 fig build
 ```
 
