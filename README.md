@@ -3,19 +3,21 @@
 1. git clone
  
 ```
-git clone https://github.com/yangtao309/docker-karaf.git
+git clone https://github.com/yangtao309/fig-karaf.git
 ```
 
 2. build 
 
 ```
-sh build.sh
+sudo chmod +x install-fig.sh
+./install-fig.sh
+fig build
 ```
 
 3. run
 
 ```
-sh karaf.sh
+fig up -d
 
 docker ps 
 
@@ -24,10 +26,10 @@ docker port <container_id> <port>
 ssh root@127.0.0.1 -p <port>
 ```
 
-or run bash
+or 
 
 ```
-sh karaf-bash.sh
+fig up 
 ```
 
 
