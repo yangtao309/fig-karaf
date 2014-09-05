@@ -1,0 +1,19 @@
+
+db:
+  image: tutum/mysql
+  environment:
+    MYSQL_DATABASE: karaf-app
+  ports:
+    - "49163:3306"
+web:
+  build: .
+  ports:
+    - "49153:22"
+    - "49154:8181"
+    - "49155:5005"
+  volumes:
+    - "/Users/m2:/tmp/m2" 
+  links:
+    - db
+
+
